@@ -1,6 +1,8 @@
 maintainer       "Matt Halliday"
 maintainer_email "matthalliday@gmail.com"
-license          "All rights reserved"
+license          "MIT"
 description      "Configuration for web apps using PHP and Ruby"
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+long_description "See README.md for more detailed information"
 version          "0.1.0"
+supports         "ubuntu"
+depends          "apache2"
