@@ -3,6 +3,7 @@
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
   DocumentRoot <%= @params[:docroot] %>
   RewriteEngine On
+  EnableSendfile Off
 
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
