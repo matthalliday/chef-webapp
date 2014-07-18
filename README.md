@@ -3,7 +3,7 @@ chef-webapp
 
 Description
 -----------
-Configuration for web apps using PHP and Ruby.
+Configuration for web apps using PHP
 
 Requirements
 ------------
@@ -26,7 +26,7 @@ Create a new data bag item named `webapp.json` in `data_bags/sites`. This data b
 	"host": "webapp.dev",
 	"aliases": [
 		"www.webapp.dev",
-		"webapp.*.xip.io"
+		"webapp.ngrok.com"
 	],
 	"docroot": "/var/www/webapp.dev/public" // Optional - defaults to /var/www
 }
@@ -35,8 +35,4 @@ Create a new data bag item named `webapp.json` in `data_bags/sites`. This data b
 Advanced Usage
 --------------
 
-If you want to make your web app available to your local network, you will need to configure your Vagrantfile to use a public network (and also disable NFS folder syncing). Your web app will then be available to any device on your local network via the `xip.io` alias.
-
-For example, if your alias is set to `webapp.*.xip.io` and your guest machine IP address is `10.0.1.34`, then you will be able to access your app via `http://webapp.10.0.1.34.xip.io`.
-
-If you don't know your guest machine's IP address, you can find it by using `vagrant ssh` and `ifconfig`.
+If you need to test your web app on different devices/systems, ngrok is highly recommended. See the "[Requesting a specific tunnel subdomain](https://ngrok.com/usage)" section of the documentation for more information.
